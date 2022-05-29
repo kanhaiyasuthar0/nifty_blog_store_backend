@@ -1,0 +1,25 @@
+{
+  "name": "nifty_blog_store",
+  "version": "1.0.0",
+  "description": "A blog application backend developed to help users to post their blogs and share idea which can be helpfull for all.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanhaiyasuthar0/nifty_blog_store_backend.git"
+  },
+  "author": "\"kanhaiya suthar\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kanhaiyasuthar0/nifty_blog_store_backend/issues"
+  },
+  "homepage": "https://github.com/kanhaiyasuthar0/nifty_blog_store_backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.4"
+  }
+}
