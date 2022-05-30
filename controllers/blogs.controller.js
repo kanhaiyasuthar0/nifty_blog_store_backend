@@ -1,4 +1,6 @@
 const Blogs = require("../models/blog");
+
+//search data with author
 const getdataByAuthor = () => {
   return async (req, res) => {
     let all = await Blogs.find({}).lean().exec();
@@ -8,6 +10,7 @@ const getdataByAuthor = () => {
   };
 };
 
+// add new blog to bakcend
 const addBlogs = () => {
   return async (req, res) => {
     let response = await Blogs.insertMany([req.body]);
@@ -16,6 +19,7 @@ const addBlogs = () => {
   };
 };
 
+//fetch all blogs sorted as per likes
 const getAllBlogs = () => {
   return async (req, res) => {
     let all = await Blogs.find({}).lean().exec();
@@ -24,6 +28,7 @@ const getAllBlogs = () => {
   };
 };
 
+//search data with title
 const getdataByTitle = () => {
   return async (req, res) => {
     let all = await Blogs.find({}).lean().exec();
@@ -33,9 +38,11 @@ const getdataByTitle = () => {
     res.send(filtered);
   };
 };
+
+//like particular blog : get by id and incerementing likes
 const likeBlog = () => {
   return async (req, res) => {
-    let items = await Blogs.findOne({ title: req.body.title });
+    let items = await Blogs.findOne({ id: req.body.id });
 
     items.likes = items.likes + 1;
     let item = await Blogs.updateOne(
@@ -46,6 +53,8 @@ const likeBlog = () => {
     res.send(`${items.likes}`);
   };
 };
+
+//fetch particular blog with id
 const viweBlog = () => {
   return async (req, res) => {
     let items = await Blogs.findOne({ id: req.body.id });
@@ -54,7 +63,15 @@ const viweBlog = () => {
   };
 };
 
+//default
+const greet = () => {
+  return async (req, res) => {
+    res.send("Welcome to the world of blogging");
+  };
+};
+
 module.exports = {
+  greet,
   getdataByAuthor,
   addBlogs,
   getAllBlogs,

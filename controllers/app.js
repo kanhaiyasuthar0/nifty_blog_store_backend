@@ -4,6 +4,7 @@ const cors = require("cors");
 const blogsController = require("./blogs.controller");
 app.use(express.json([]));
 app.use(cors());
+app.get("/", blogsController.greet());
 app.get("/author", blogsController.getdataByAuthor());
 app.post("/add", blogsController.addBlogs());
 app.get("/all", blogsController.getAllBlogs());
