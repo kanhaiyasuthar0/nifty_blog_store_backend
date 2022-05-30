@@ -66,7 +66,9 @@ const viweBlog = () => {
 //default
 const greet = () => {
   return async (req, res) => {
-    res.send('<img src="https://i.ibb.co/Ryd3J1M/Blog-post.gif"/>');
+    res.send(
+      '<h1>All paths<h1/><br><p> https://blog-backned.herokuapp.com/ <p/><img src="https://i.ibb.co/Ryd3J1M/Blog-post.gif"/>'
+    );
   };
 };
 
