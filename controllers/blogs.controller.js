@@ -66,7 +66,7 @@ const viweBlog = () => {
 //default
 const greet = () => {
   return async (req, res) => {
-    res.send("Welcome to the world of blogging");
+    res.send('<img src="https://i.ibb.co/Ryd3J1M/Blog-post.gif"/>');
   };
 };
 
