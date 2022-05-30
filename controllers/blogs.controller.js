@@ -67,7 +67,7 @@ const viweBlog = () => {
 const greet = () => {
   return async (req, res) => {
     res.send(
-      '<div> <div/><img src="https://i.ibb.co/Ryd3J1M/Blog-post.gif"/><div/><div><h1>All paths<h1/><br><p> https://blog-backned.herokuapp.com/all <p/><br><p> https://blog-backned.herokuapp.com/id <p/><br><p> https://blog-backned.herokuapp.com/author <p/><br><p> https://blog-backned.herokuapp.com/add <p/><br><p> https://blog-backned.herokuapp.com/title <p/><br><p> https://blog-backned.herokuapp.com/like <p/><br><p> https://blog-backned.herokuapp.com/id <p/> '
+      '<div> <h1>Welcome to world of blogging<h1/> <div/><img src="https://i.ibb.co/Ryd3J1M/Blog-post.gif"/><div><h1>All paths<h1/><br><p> https://blog-backned.herokuapp.com/all <p/> to get all blogs<br><p> https://blog-backned.herokuapp.com/id <p/> to get a particular blog<br><p> https://blog-backned.herokuapp.com/author <p/> to search by author <br><p> https://blog-backned.herokuapp.com/add <p/><br><p> https://blog-backned.herokuapp.com/title <p/> to search by title<br><p> https://blog-backned.herokuapp.com/like <p/> to like <br><p> https://blog-backned.herokuapp.com/id <p/> <div/> '
     );
   };
 };
